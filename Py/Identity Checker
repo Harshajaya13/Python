@@ -1,0 +1,43 @@
+n1 = 256
+n2 = 256
+print(n1 is n2)
+#python usually gives the numbers like the int into the same location
+# when we use the is operator then it will compare with the memory location and says true or false
+
+a = int("256")
+b = int("256")
+print(a is b)
+
+c = -5
+d = -5
+print(c is d)
+
+
+e = "gate"
+f = "gate"
+print(e is f)
+#same happens with the strings too
+#it will take the same memory location for the small strings
+
+name1 = "Harsha Vardhan"
+name2 = "Harsha Vardhan"
+print(name1 is name2)
+
+gate1 = "gate2027"
+gate2 = "gate"+"2027"
+print(gate1 is gate2)
+
+first = "gate2027"
+second = "".join(["gate","2027"])
+print(first is second)
+print(first)
+print(second)
+
+g="-6"
+h="-6"
+print(g is h)
+
+"""
+
+
+"""
