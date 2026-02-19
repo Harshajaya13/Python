@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Local Server Test</title>
+</head>
+<body style="font-family: Arial; padding: 50px;">
+
+  <h2>Test My Python + ngrok Server</h2>
+  
+  <button id="fetchButton" style="padding: 10px; font-size: 16px;">
+    Get File From My Laptop
+  </button>
+
+  <div id="displayArea" style="margin-top: 20px; padding: 15px; border: 2px dashed #ccc; background: #f9f9f9;">
+    Waiting for you to click the button...
+  </div>
+
+  <script>
+    document.getElementById("fetchButton").addEventListener("click", function() {
+      // We are telling the browser to grab 'data.txt' from our Python server
+      fetch('/data.txt')
+        .then(response => response.text())
+        .then(data => {
+          // Put the text from the file into the display box
+          document.getElementById("displayArea").innerText = data;
+        })
+        .catch(error => {
+          document.getElementById("displayArea").innerText = "Something went wrong: " + error;
+        });
+    });
+  </script>
+
+</body>
+</html>
